@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+     <style>
+         .food-card {
+    background-color: white;
+    border-radius: 0px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.food-image {
+    position: relative;
+    height: 600x;
+    overflow: hidden;
+}
+.food-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.food-card:hover .food-image img {
+    transform: scale(1.05);
+}
+
+
+.food-info {
+    padding: 10px;
+}
+
+.restaurant-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.restaurant-name span {
+    font-size: 14px;
+    color: #666;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #f8f8f8;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.rating i {
+    color: #FFD700;
+    font-size: 12px;
+}
+
+.rating span {
+    font-weight: 600;
+    font-size: 12px;
+    color: #333;
+}
+
+.food-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.food-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    height: 60px;
+    overflow: hidden;
+}
+
+.food-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.delivery-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    color: #666;
+}
+
+.price-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.original-price {
+    font-size: 14px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.current-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #D70F64;
+}
+
+.food-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.quantity-btn {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.quantity-btn:hover:not(:disabled) {
+    background-color: #e0e0e0;
+}
+
+.quantity-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.quantity {
+    font-size: 14px;
+    font-weight: 600;
+    min-width: 20px;
+    text-align: center;
+}
+
+.add-to-cart-btn {
+    background-color: #D70F64;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #c00c58;
+}
+        </style>
+ </head>
+ <body>
+    <div class="food-card" data-category="chicken">
+        <div class="food-image">
+            <img src="chicken joy.jpg" alt="Crispy Fried Chicken">
+        </a>
+        </div>
+        <div class="food-info">
+            <div class="restaurant-name">
+                <span>Jollibee</span>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <span>4.7</span>
+                </div>
+            </div>
+            <h3 class="food-name">Chickenjoy Bucket</h3>
+            <p class="food-description">6-piece crispy fried chicken with gravy and a side of spaghetti.</p>
+            <div class="food-meta">
+                <div class="delivery-info">
+                    <i class="fas fa-clock"></i>
+                    <span>20-30 min</span>
+                </div>
+                <div class="price-info">
+                    
+                    <span class="current-price">₱450</span>
+                </div>
+            </div>
+            <div class="food-actions">
+                <div class="quantity-control">
+                    <button class="quantity-btn minus-btn" disabled>
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <span class="quantity">1</span>
+                    <button class="quantity-btn plus-btn">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+                <button class="add-to-cart-btn">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+    <div>
+     
+    </div>
+ </body>
